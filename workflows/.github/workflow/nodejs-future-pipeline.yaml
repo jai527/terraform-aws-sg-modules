@@ -1,0 +1,26 @@
+name: nodejs-future-workflow
+on: 
+  workflow_dispatch: 
+    inputs:
+      project:
+        description: 'project name'
+        required: true
+        type: string
+      environment:
+        description: 'environment name'
+        required: true
+        type: string
+      component:
+        description: 'component name'
+        required: true
+        type: string
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: clone code 
+        uses: actions/checkout@v6
+      
+      - name: list the fail 
+        run: ls -l
