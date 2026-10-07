@@ -1,6 +1,6 @@
 name: nodejs-future-workflow
 on: 
-  workflow_dispatch: 
+  workflow_call: 
     inputs:
       project:
         description: 'project name'
